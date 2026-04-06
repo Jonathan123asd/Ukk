@@ -21,6 +21,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
+        'kelas',
+        'status',
+        'nis',
     ];
 
     /**
@@ -32,6 +36,43 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    public function isApproved()
+    {
+        return $this->status === 'approved';
+    }
+
+    public function isPending()
+    {
+        return $this->status === 'pending';
+    }
+
+    public function isRejected()
+    {
+        return $this->status === 'rejected';
+    }
+
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+
+    public function isSiswa()
+    {
+        return $this->role === 'siswa';
+    }
+
+    public function pengaduan()
+    {
+        return $this->hasMany(Pengaduan::class, 'user_id');
+    }
+
+    public function respon()
+    {
+        return $this->hasMany(Respon::class, 'admin_id');
+    }
+
+    use HasFactory, Notifiable;
 
     /**
      * Get the attributes that should be cast.

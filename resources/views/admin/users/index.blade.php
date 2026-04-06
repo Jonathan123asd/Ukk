@@ -9,7 +9,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <div>
                     <h1 class="fw-bold" style="color: var(--dark-gray);">Manajemen User</h1>
-                    <p class="text-muted mb-0">Kelola data siswa dan admin</p>
+                    <p class="text-muted mb-0">Kelola data siswa</p>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
         <!-- Users Table Card -->
         <!-- Filter Section -->
 
-        <div class="row mb-4 g-3">
+        {{-- <div class="row mb-4 g-3">
             <div class="col-md-6">
                 <div class="search-box d-flex align-items-center gap-3">
                     <i class="bi bi-search text-muted"></i>
@@ -70,20 +70,20 @@
             </div>
             <div class="col-md-3">
                 <select class="form-select filter-select" id="roleFilter" onchange="filterTable()">
-                    <option value="all">Semua Role</option>
+                    <option value="role">Semua Role</option>
                     <option value="siswa">Siswa</option>
                     <option value="admin">Admin</option>
                 </select>
             </div>
             <div class="col-md-3">
                 <select class="form-select filter-select" id="statusFilter" onchange="filterTable()">
-                    <option value="all">Semua Status</option>
+                    <option value="status">Semua Status</option>
                     <option value="approved">Approved</option>
                     <option value="pending">Pending</option>
                     <option value="rejected">Rejected</option>
                 </select>
             </div>
-        </div>
+        </div> --}}
         <div class="card border-0 rounded-4 p-4 bg-light">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h5><i class="bi bi-list me-2" style="color: var(--primary-blue);"></i> Daftar Semua User</h5>

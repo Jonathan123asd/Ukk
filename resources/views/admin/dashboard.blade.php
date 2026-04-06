@@ -21,7 +21,7 @@
                         <p class="text-muted mb-0">Admin Sekolah</p>
                     </div>
 
-                    <div class="position-relative">
+                    {{-- <div class="position-relative">
                         <a href="#" class="text-dark">
                             <i class="bi bi-bell fs-4"></i>
                         </a>
@@ -29,7 +29,7 @@
                             style="font-size: 0.6rem;">
                             0
                         </span>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

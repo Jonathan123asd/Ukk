@@ -21,7 +21,7 @@
                         <p class="text-muted mb-0">{{ Auth::user()->kelas ?? 'XII RPL 1' }}</p>
                     </div>
 
-                    <!-- Notification Bell -->
+                    {{-- <!-- Notification Bell -->
                     <div class="position-relative">
                         <a href="#" class="text-dark">
                             <i class="bi bi-bell fs-4"></i>
@@ -30,7 +30,7 @@
                             style="font-size: 0.6rem;">
                             3
                         </span>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

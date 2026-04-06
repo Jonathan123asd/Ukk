@@ -1,6 +1,7 @@
 {{-- resources/views/landing.blade.php --}}
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,12 +26,29 @@
             padding-top: 64px;
         }
 
-        .text-primary-blue { color: #2563EB; }
-        .text-primary-green { color: #10B981; }
-        .text-dark-gray { color: #1E293B; }
-        .bg-primary-blue { background-color: #2563EB; }
-        .bg-primary-green { background-color: #10B981; }
-        .bg-dark-gray { background-color: #1E293B; }
+        .text-primary-blue {
+            color: #2563EB;
+        }
+
+        .text-primary-green {
+            color: #10B981;
+        }
+
+        .text-dark-gray {
+            color: #1E293B;
+        }
+
+        .bg-primary-blue {
+            background-color: #2563EB;
+        }
+
+        .bg-primary-green {
+            background-color: #10B981;
+        }
+
+        .bg-dark-gray {
+            background-color: #1E293B;
+        }
 
         .gradient-bg {
             background: linear-gradient(135deg, #2563EB, #10B981);
@@ -168,12 +186,29 @@
             margin-bottom: 24px;
         }
 
-        .icon-wrapper-blue { background-color: #dbeafe; }
-        .icon-wrapper-green { background-color: #dcfce7; }
-        .icon-wrapper-purple { background-color: #ede9fe; }
-        .icon-wrapper-yellow { background-color: #fef9c3; }
-        .icon-wrapper-pink { background-color: #fce7f3; }
-        .icon-wrapper-indigo { background-color: #e0e7ff; }
+        .icon-wrapper-blue {
+            background-color: #dbeafe;
+        }
+
+        .icon-wrapper-green {
+            background-color: #dcfce7;
+        }
+
+        .icon-wrapper-purple {
+            background-color: #ede9fe;
+        }
+
+        .icon-wrapper-yellow {
+            background-color: #fef9c3;
+        }
+
+        .icon-wrapper-pink {
+            background-color: #fce7f3;
+        }
+
+        .icon-wrapper-indigo {
+            background-color: #e0e7ff;
+        }
 
         .step-number {
             width: 64px;
@@ -188,10 +223,21 @@
             color: white;
         }
 
-        .step-number-blue { background-color: #2563EB; }
-        .step-number-green { background-color: #10B981; }
-        .step-number-yellow { background-color: #F59E0B; }
-        .step-number-purple { background-color: #7C3AED; }
+        .step-number-blue {
+            background-color: #2563EB;
+        }
+
+        .step-number-green {
+            background-color: #10B981;
+        }
+
+        .step-number-yellow {
+            background-color: #F59E0B;
+        }
+
+        .step-number-purple {
+            background-color: #7C3AED;
+        }
 
         .stat-number {
             font-size: 2.25rem;
@@ -258,15 +304,20 @@
         }
     </style>
 </head>
+
 <body>
     {{-- Navigation --}}
     <nav class="navbar navbar-expand-lg fixed-top bg-white bg-opacity-95 backdrop-blur border-bottom">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                <div class="gradient-bg rounded-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                {{-- <div class="gradient-bg rounded-3 d-flex align-items-center justify-content-center"
+                    style="width: 40px; height: 40px;">
                     <i class="bi bi-mortarboard-fill text-white"></i>
+                </div> --}}
+                <div class="text-start mb-2">
+                    <img src="{{ asset('images/Logo.png') }}" style="max-height: 55px;" class="img-fluid">
                 </div>
-                <span class="fw-bold text-dark-gray fs-4">Sipra</span>
+                {{-- <span class="fw-bold text-dark-gray fs-4">Sipra</span> --}}
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -318,12 +369,13 @@
                     </p>
 
                     <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
-                        <a href="{{ route('register') }}" class="btn btn-primary-blue-lg d-flex align-items-center justify-content-center gap-2">
+                        <a href="{{ route('register') }}"
+                            class="btn btn-primary-blue-lg d-flex align-items-center justify-content-center gap-2">
                             Mulai Sekarang
                             <i class="bi bi-arrow-right"></i>
                         </a>
                         <a href="{{ route('login') }}" class="btn btn-outline-primary-blue">
-                            Login Siswa
+                            Masuk
                         </a>
                     </div>
 
@@ -348,14 +400,14 @@
                     <div class="position-relative">
                         <div class="bg-white rounded-4 shadow-lg p-4 border">
                             <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop"
-                                 alt="Students collaborating"
-                                 class="img-fluid rounded-3"
-                                 style="height: 320px; width: 100%; object-fit: cover;">
+                                alt="Students collaborating" class="img-fluid rounded-3"
+                                style="height: 320px; width: 100%; object-fit: cover;">
                         </div>
 
                         <div class="floating-card">
                             <div class="d-flex align-items-center gap-3">
-                                <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                                <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width: 48px; height: 48px;">
                                     <i class="bi bi-check-circle-fill text-primary-green fs-4"></i>
                                 </div>
                                 <div>
@@ -388,7 +440,8 @@
                         </div>
                         <h3 class="h4 fw-bold text-dark-gray mb-3">Pengaduan Mudah</h3>
                         <p class="text-secondary">
-                            Form pengaduan yang simpel dan intuitif. Tambahkan foto, pilih kategori, dan kirim dalam hitungan detik.
+                            Form pengaduan yang simpel dan intuitif. Tambahkan foto, pilih kategori, dan kirim dalam
+                            hitungan detik.
                         </p>
                     </div>
                 </div>
@@ -400,7 +453,8 @@
                         </div>
                         <h3 class="h4 fw-bold text-dark-gray mb-3">Tracking Real-time</h3>
                         <p class="text-secondary">
-                            Pantau status pengaduanmu secara real-time. Dari pending, proses, hingga selesai dengan notifikasi otomatis.
+                            Pantau status pengaduanmu secara real-time. Dari pending, proses, hingga selesai dengan
+                            notifikasi otomatis.
                         </p>
                     </div>
                 </div>
@@ -412,7 +466,8 @@
                         </div>
                         <h3 class="h4 fw-bold text-dark-gray mb-3">Aman & Transparan</h3>
                         <p class="text-secondary">
-                            Data pengaduan tersimpan aman. Admin sekolah dapat melihat dan merespon dengan cepat dan transparan.
+                            Data pengaduan tersimpan aman. Admin sekolah dapat melihat dan merespon dengan cepat dan
+                            transparan.
                         </p>
                     </div>
                 </div>
@@ -424,7 +479,8 @@
                         </div>
                         <h3 class="h4 fw-bold text-dark-gray mb-3">Dashboard Interaktif</h3>
                         <p class="text-secondary">
-                            Lihat statistik pengaduan, history, dan progress penyelesaian dalam dashboard yang user-friendly.
+                            Lihat statistik pengaduan, history, dan progress penyelesaian dalam dashboard yang
+                            user-friendly.
                         </p>
                     </div>
                 </div>
@@ -436,7 +492,8 @@
                         </div>
                         <h3 class="h4 fw-bold text-dark-gray mb-3">Multi-Role System</h3>
                         <p class="text-secondary">
-                            Sistem untuk siswa dan admin. Approval registrasi, kelola pengaduan, dan respon complaint dengan mudah.
+                            Sistem untuk siswa dan admin. Approval registrasi, kelola pengaduan, dan respon complaint
+                            dengan mudah.
                         </p>
                     </div>
                 </div>
@@ -448,7 +505,8 @@
                         </div>
                         <h3 class="h4 fw-bold text-dark-gray mb-3">Analitik Lengkap</h3>
                         <p class="text-secondary">
-                            Admin dapat melihat report, statistik pengaduan per kategori, dan trend untuk evaluasi sekolah.
+                            Admin dapat melihat report, statistik pengaduan per kategori, dan trend untuk evaluasi
+                            sekolah.
                         </p>
                     </div>
                 </div>
@@ -524,42 +582,50 @@
 
                     <div class="d-flex flex-column gap-4">
                         <div class="d-flex gap-3">
-                            <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px;">
+                            <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                style="width: 40px; height: 40px;">
                                 <i class="bi bi-check-circle-fill text-primary-green"></i>
                             </div>
                             <div>
                                 <h4 class="h6 fw-bold text-dark-gray mb-1">Cepat & Efisien</h4>
-                                <p class="text-secondary">Tidak perlu lagi lapor manual ke ruang guru. Semua online dan real-time.</p>
+                                <p class="text-secondary">Tidak perlu lagi lapor manual ke ruang guru. Semua online dan
+                                    real-time.</p>
                             </div>
                         </div>
 
                         <div class="d-flex gap-3">
-                            <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px;">
+                            <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                style="width: 40px; height: 40px;">
                                 <i class="bi bi-check-circle-fill text-primary-green"></i>
                             </div>
                             <div>
                                 <h4 class="h6 fw-bold text-dark-gray mb-1">History Lengkap</h4>
-                                <p class="text-secondary">Semua pengaduan tersimpan rapi. Bisa dilihat kapan saja untuk evaluasi.</p>
+                                <p class="text-secondary">Semua pengaduan tersimpan rapi. Bisa dilihat kapan saja untuk
+                                    evaluasi.</p>
                             </div>
                         </div>
 
                         <div class="d-flex gap-3">
-                            <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px;">
+                            <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                style="width: 40px; height: 40px;">
                                 <i class="bi bi-check-circle-fill text-primary-green"></i>
                             </div>
                             <div>
                                 <h4 class="h6 fw-bold text-dark-gray mb-1">Approval System</h4>
-                                <p class="text-secondary">Admin bisa approve registrasi siswa untuk keamanan data yang lebih baik.</p>
+                                <p class="text-secondary">Admin bisa approve registrasi siswa untuk keamanan data yang
+                                    lebih baik.</p>
                             </div>
                         </div>
 
                         <div class="d-flex gap-3">
-                            <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px;">
+                            <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                style="width: 40px; height: 40px;">
                                 <i class="bi bi-check-circle-fill text-primary-green"></i>
                             </div>
                             <div>
                                 <h4 class="h6 fw-bold text-dark-gray mb-1">Mobile Friendly</h4>
-                                <p class="text-secondary">Responsive design yang bisa diakses dari HP, tablet, atau komputer.</p>
+                                <p class="text-secondary">Responsive design yang bisa diakses dari HP, tablet, atau
+                                    komputer.</p>
                             </div>
                         </div>
                     </div>
@@ -568,13 +634,13 @@
                 <div class="col-lg-6">
                     <div class="position-relative">
                         <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop"
-                             alt="School students"
-                             class="img-fluid rounded-4 shadow-lg"
-                             style="height: 400px; width: 100%; object-fit: cover;">
+                            alt="School students" class="img-fluid rounded-4 shadow-lg"
+                            style="height: 400px; width: 100%; object-fit: cover;">
 
                         <div class="floating-card-right">
                             <div class="d-flex align-items-center gap-3 mb-3">
-                                <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width: 40px; height: 40px;">
                                     <i class="bi bi-bar-chart-fill text-primary-blue"></i>
                                 </div>
                                 <div>
@@ -602,11 +668,12 @@
                 Bergabung dengan ratusan siswa yang sudah menggunakan Sipra untuk menyampaikan aspirasi mereka.
             </p>
             <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-                <a href="{{ route('register') }}" class="btn btn-light btn-primary-blue-lg text-primary-blue fw-bold shadow-lg">
+                <a href="{{ route('register') }}"
+                    class="btn btn-light btn-primary-blue-lg text-primary-blue fw-bold shadow-lg">
                     Daftar Gratis Sekarang
                 </a>
                 <a href="{{ route('login') }}" class="btn btn-outline-white">
-                    Sudah Punya Akun? Login
+                    Sudah Punya Akun? Masuk
                 </a>
             </div>
         </div>
@@ -618,10 +685,12 @@
             <div class="row g-4 mb-5">
                 <div class="col-md-6 col-lg-3">
                     <div class="d-flex align-items-center gap-2 mb-3">
-                        <div class="gradient-bg rounded-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                        {{-- <div class="gradient-bg rounded-3 d-flex align-items-center justify-content-center"
+                            style="width: 40px; height: 40px;">
                             <i class="bi bi-mortarboard-fill text-white"></i>
-                        </div>
+                        </div> --}}
                         <span class="fw-bold fs-4">Sipra</span>
+
                     </div>
                     <p class="text-secondary">
                         Platform pengaduan sarana sekolah yang modern, transparan, dan mudah digunakan.
@@ -631,9 +700,12 @@
                 <div class="col-md-6 col-lg-3">
                     <h5 class="fw-bold mb-4">Produk</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#features" class="text-secondary text-decoration-none hover-white">Fitur</a></li>
-                        <li class="mb-2"><a href="#how-it-works" class="text-secondary text-decoration-none hover-white">Cara Kerja</a></li>
-                        <li class="mb-2"><a href="#benefits" class="text-secondary text-decoration-none hover-white">Keuntungan</a></li>
+                        <li class="mb-2"><a href="#features"
+                                class="text-secondary text-decoration-none hover-white">Fitur</a></li>
+                        <li class="mb-2"><a href="#how-it-works"
+                                class="text-secondary text-decoration-none hover-white">Cara Kerja</a></li>
+                        <li class="mb-2"><a href="#benefits"
+                                class="text-secondary text-decoration-none hover-white">Keuntungan</a></li>
                     </ul>
                 </div>
 
@@ -641,13 +713,12 @@
                     <h5 class="fw-bold mb-4">Akses</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2">
-                            <a href="{{ route('login') }}" class="text-secondary text-decoration-none hover-white">Login Siswa</a>
+                            <a href="{{ route('login') }}"
+                                class="text-secondary text-decoration-none hover-white">Masuk</a>
                         </li>
                         <li class="mb-2">
-                            <a href="{{ route('login') }}" class="text-secondary text-decoration-none hover-white">Login Admin</a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="{{ route('register') }}" class="text-secondary text-decoration-none hover-white">Registrasi</a>
+                            <a href="{{ route('register') }}"
+                                class="text-secondary text-decoration-none hover-white">Pendaftaran</a>
                         </li>
                     </ul>
                 </div>
@@ -671,4 +742,5 @@
     {{-- Bootstrap JS --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
