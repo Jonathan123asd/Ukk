@@ -103,11 +103,11 @@
                 <div class="mt-2 p-4 rounded-4" style="background:#e9fdf3; border:1px solid #b7f0d2;">
 
                     <p class="mb-1">
-                        {{ $pengaduan->respon->first()->pesan }}
+                        {{ $pengaduan->respon->last()->pesan }}
                     </p>
 
                     <small class="text-muted">
-                        {{ $pengaduan->respon->first()->created_at->format('d F Y H:i') }}
+                        {{ $pengaduan->respon->last()->created_at->format('d F Y H:i') }}
                     </small>
 
                 </div>
