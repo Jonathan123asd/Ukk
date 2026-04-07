@@ -109,7 +109,7 @@
 
                 <div class="d-flex flex-wrap gap-4 small text-muted align-items-center">
                     <span><i class="bi bi-building me-1"></i> {{ $item->lokasi ?? 'Fasilitas Kelas' }}</span>
-                    <span><i class="bi bi-door-open me-1"></i> {{ $item->ruangan ?? $item->kategori }}</span>
+                    <span><i class="bi bi-door-open me-1"></i> {{ $item->kategori->nama_kategori ?? '-'  }}</span>
                     <span><i class="bi bi-calendar me-1"></i> {{ date('d/m/Y', strtotime($item->tanggal)) }}</span>
 
                     @if ($item->status != 'pending')
