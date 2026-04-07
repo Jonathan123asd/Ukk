@@ -92,7 +92,7 @@ class SiswaController extends Controller
             $query->where(function ($q) use ($request) {
                 $q->where('judul', 'like', '%' . $request->search . '%')
                     ->orWhere('deskripsi', 'like', '%' . $request->search . '%')
-                    ->orWhere('kategori', 'like', '%' . $request->search . '%')
+                    ->orWhere('kategori_id', 'like', '%' . $request->search . '%')
                     ->orWhere('lokasi', 'like', '%' . $request->search . '%');
             });
         }
